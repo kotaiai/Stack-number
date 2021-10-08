@@ -30,22 +30,16 @@ bool data::empt(){
 }
 
 void data::push(int input){
-    if (full())
-        cout<<"The list is full!!";
-    else{
         top++;
         lis[top] = input;
-    }
+
 }
 
 void data::pull(int &input){
-    if (empt())
-        cout<<"There is no data in the list!!";
-    else{
+
         input = lis[top];
         cout<<input;
         top--;
-    }
 }
 
 

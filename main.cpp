@@ -18,25 +18,17 @@ int main()
         main();
     }data record(siz);
 
-
-
-
-
-
-
-
     do {
     choice = 0;
     cout<<"[1] Input numbers "<<endl;
     cout<<"[2] Output numbers"<<endl<<endl;
     cin>>choice;
     if (choice == 1){
-        if (siz == 0){
-                cout<<"INPUT THE SIZE FIRST!!!"<<endl;
-                //sleep(2s);
+            if (record.full()){
+                cout<<"The list is full!!";
                 system("pause");
                 system("cls");
-                            }
+            }
 
             else{
 
@@ -52,13 +44,10 @@ int main()
             }
     }
     else if(choice==2){
-        if (siz == 0){
-
-                cout<<"INPUT THE SIZE FIRST!!!";
-                //sleep(2s);
+            if (record.empt()){
+                cout<<"There is no data in the list!!";
                 system("pause");
                 system("cls");
-
             }
             else{
                 for (int i = 0; i < siz; i++){
